@@ -50,6 +50,7 @@ public class UserDaoImp implements UserDao {
    @SuppressWarnings("unchecked")
    public void delete() {
       TypedQuery<User> query=sessionFactory.getCurrentSession().createQuery("delete from User");
+      query.executeUpdate();
 
    }
 
